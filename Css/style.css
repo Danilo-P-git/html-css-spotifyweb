@@ -167,6 +167,7 @@ main {
 .box {
   width: 250px;
   position: relative;
+  margin-bottom: 50px;
 }
 .box .playhover {
   display: none;
@@ -175,14 +176,15 @@ main {
   left: 0;
   background-color: red;
   width: 100%;
-  height: 100%;
+  height: 250px;
 }
 .box:hover .playhover {
   display: block
 }
-.main-content-center .box:not(:first-child) {
+.main-content-center .box {
   margin-left: 20px;
 }
+
 .main-content-center .box  img {
   width: 100%;
 }
@@ -216,6 +218,9 @@ main {
   .main-content-center .box:nth-child(odd) {
     margin-right: 20px;
   }
+  .box .playhover {
+    height: 100%
+  }
 }
 /* MAIN */
 /* FOOTER */
@@ -231,9 +236,39 @@ footer {
   flex-direction: row
 
 }
-.left img {
+.left {
   display: flex;
   flex-direction: row;
+  align-items: center;
+
+}
+.left img {
+  height: 50px;
   width: 50px;
+}
+.center {
+  height: 75%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+  color: white;
+}
+.center .player {
+  margin-left: 50px;
+}
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.right hr {
+  width: 150px;
+  margin: 10px;
+}
+.r-icon {
+  padding: 10px;
 }
 /* FOOTER */
