@@ -23,8 +23,16 @@ aside {
 }
 .logo {
   color: blue;
-  height: 10%
+  height: 10%;
 
+}
+.logo-collapse {
+  display: none;
+  height: 10%;
+
+}
+.nav-collapse {
+display: none;
 }
 .main-nav {
   background-color: orange;
@@ -70,9 +78,44 @@ aside {
   margin-top:auto;
   flex-shrink: 0;
 
-
+}
+.aside-bottom-collapse {
+  height: 10%;
+  background-color: grey;
+  width: 100%;
+  margin-top:auto;
+  flex-shrink: 0;
+  display: none;
 }
 
+@media screen and (max-width: 576px) {
+  .logo {
+    display: none;
+  }
+  .logo-collapse {
+    display: block
+  }
+  .nav-no-collapse {
+    display: none;
+
+  }
+  .main-nav {
+    padding: 0px;
+  }
+  .nav-collapse {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .secondary-nav {
+    display: none;
+  }
+  .aside-bottom {
+    display: none
+  }
+  .aside-bottom-collapse {
+    display: block;  }
+}
 /* SIDE NAV */
 
 /* MAIN CONTENT */
@@ -94,8 +137,7 @@ main {
   position: fixed;
   top: 0;
   right: 0;
-  width: 100%;
-  z-index: 1;
+  width: calc(100% - 10%);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -157,11 +199,33 @@ main {
 .artist .round {
   border-radius: 50%;
 }
+@media screen and (max-width: 576px) {
+  .box {
+    width: 200px;
+    height: 250px;
+    margin-left: 10px;
+  }
+  .main-content-center .box:first-child {
+    margin-left: 0px;
+  }
+}
+/* MAIN */
 /* FOOTER */
 footer {
   position: relative;
   height: 80px;
   background-color: red;
   z-index: 5;
+}
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row
+
+}
+.left img {
+  display: flex;
+  flex-direction: row;
+  width: 50px;
 }
 /* FOOTER */
