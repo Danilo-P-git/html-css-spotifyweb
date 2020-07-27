@@ -15,12 +15,11 @@ ul li {
 /* SIDE NAV */
 aside {
 
-  width: 15%;
+  width: 10%;
   height: 100%;
   background-color: green;
   display: flex;
   flex-direction: column;
-
 }
 .logo {
   color: blue;
@@ -84,7 +83,7 @@ main {
 .main-content-top {
   height: 100%;
   background-color: yellow;
-  width: calc(100% - 15%);
+  width: 100%;
   overflow-y: auto;
   padding: 20px;
 
@@ -95,7 +94,7 @@ main {
   position: fixed;
   top: 0;
   right: 0;
-  width: calc(100% - 15%);
+  width: 100%;
   z-index: 1;
   display: flex;
   justify-content: flex-end;
@@ -113,11 +112,39 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-
+  flex-wrap: wrap;
 }
 
 .main-content-center {
   display: flex;
+  flex-direction: row;
+  background-color: blue;
+  flex-wrap: wrap;
+}
+.main-content-center .box {
+  width: 250px;
+  position: relative;
+}
+.box .playhover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  height: 83%;
+}
+.box:hover .playhover {
+  display: block
+}
+.main-content-center .box:not(:first-child) {
+  margin-left: 20px;
+}
+.main-content-center .box  img {
+  width: 100%;
+}
+.main-content-center .box p {
+  text-align: center;
 }
 /* FOOTER */
 footer {
