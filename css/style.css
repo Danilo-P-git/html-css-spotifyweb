@@ -4,7 +4,17 @@
 
 }
 .btn-flex {
-
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #fff;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+}
+.btn-flex:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #000;
+  border: 1px solid #000;
 }
 ul li {
   list-style: none;
@@ -218,7 +228,7 @@ main {
 }
 .top-bar {
   height: 80px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(0,0,0,0.5);
   position: fixed;
   top: 0;
   right: 0;
@@ -252,7 +262,7 @@ main {
   flex-wrap: wrap;
 }
 .box {
-  width: 16%;
+  width: 15%;
   margin-bottom: 50px;
   flex-shrink: 0;
 }
@@ -368,10 +378,11 @@ footer {
 
 }
 .command {
-  margin-left: 20%;
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 10px;
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .time-and-bar {
@@ -415,13 +426,16 @@ footer {
 .right {
   width: 30%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  margin-right: 30px;
 
 }
-.right hr {
-  width: 150px;
-  margin: 10px;
+.volume {
+  width: 20%;
+  height: 10px;
+  background-color: #5a5a5a;
+  border-radius: 20px;
 }
 .r-icon {
   padding: 10px;
