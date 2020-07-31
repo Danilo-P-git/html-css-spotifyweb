@@ -34,12 +34,27 @@ aside ul li:hover {
 .categories li {
   cursor: pointer;
   text-transform: uppercase;
+  position: relative
 }
-.categories li:hover  {
+.categories li .underbar {
+  visibility: hidden;
+  opacity: 0;
+  width: 40%;
+  height: 3px;
+  position: absolute;
+  background: #adff2f;
+  border-radius: 5px;
+  top: 90%;
+  left: 25%;
+  transition: visibility 0.3s , opacity 0.5s linear;
+}
+.categories li:hover   {
   color: #fff;
-
 }
-
+.categories li:hover .underbar {
+  visibility: visible;
+  opacity: 1;
+}
 .playlist-title span:hover .fa-plus-square   {
   color: #fff
 }
@@ -60,7 +75,7 @@ aside {
   z-index: 2
 }
 .logo {
-  height: 20%;
+  height: 15%;
   flex-shrink: 0;
 
 }
@@ -88,6 +103,7 @@ display: none;
 }
 .main-nav li {
   padding-bottom: 5px;
+  margin-left: 14px;
 }
 .main-nav .adaptive-icon {
   display: inline-block;
@@ -99,6 +115,8 @@ display: none;
   height: 100%;
   background-color: #000;
   overflow: hidden;
+  padding-top: 20px;
+
 }
 .playlist-list {
   background-color: #000;
@@ -106,7 +124,6 @@ display: none;
   overflow-y: auto;
   list-style: none;
   padding-left: 20px;
-
 }
 .playlist-list li {
   padding-top: 10px;
@@ -116,8 +133,11 @@ display: none;
 
 }
 .playlist-title h2 {
-  font-size: 40px;
+  font-size: 18px;
   padding: 10px 5px;
+  color: #fff;
+  margin-left: 20px;
+  text-transform: uppercase;
 }
 .playlist-title .fa-plus-square {
   font-size: 40px;
@@ -276,6 +296,7 @@ main {
   height: 20%;
   text-align: center;
   color: #fff;
+  cursor: pointer;
 
 }
 .subtitle small {
@@ -303,6 +324,7 @@ main {
   width: 100%;
   height: 100%;
 }
+
 
 .fa-play {
   position: absolute;
